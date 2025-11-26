@@ -9,7 +9,6 @@ import java.net.Socket;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        System.out.println("server avviato");
         ServerSocket mioServerSocket = new ServerSocket(3000);
         Socket mioSocket = mioServerSocket.accept();
 
@@ -28,6 +27,14 @@ public class Main {
         System.out.println(parte[0]);
         System.out.println(parte[1]);
         System.out.println(parte[2]);
+
+        String risposta = "<strong> abati </strong> matteo";
+        out.println("HTTP/1.1 200 OK");
+        out.println("Conten-Type: text/html");
+        out.println("Content-lenght:" + risposta.length());
+        out.println("Server: abatiServer");
+        System.out.println(" ");
+        out.println(risposta);
 
         mioServerSocket.close();
     }
