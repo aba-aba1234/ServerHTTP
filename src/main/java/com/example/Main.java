@@ -24,10 +24,12 @@ public class Main {
 
         } while (!in.readLine().isEmpty());
 
-        System.out.println(parte[0]);
-        System.out.println(parte[1]);
-        System.out.println(parte[2]);
+        System.out.println(parte[0]); //metodo
+        System.out.println(parte[1]); //parte 
+        System.out.println(parte[2]); //versione
 
+        if(parte[1].equals("/nome"))
+        {
         String risposta = "<strong> abati </strong> matteo";
         out.println("HTTP/1.1 200 OK");
         out.println("Conten-Type: text/html");
@@ -35,6 +37,11 @@ public class Main {
         out.println("Server: abatiServer");
         System.out.println(" ");
         out.println(risposta);
+        }
+        else
+        {
+            
+        }
 
         mioServerSocket.close();
     }
