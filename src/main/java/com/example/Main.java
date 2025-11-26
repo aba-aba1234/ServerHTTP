@@ -40,7 +40,13 @@ public class Main {
         }
         else
         {
-            
+            String risposta = "<strong> abati </strong> matteo";
+        out.println("HTTP/1.1 200 OK");
+        out.println("Conten-Type: text/html");
+        out.println("Content-lenght:" + risposta.length());
+        out.println("Server: abatiServer");
+        System.out.println(" ");
+        out.println(risposta);
         }
 
         mioServerSocket.close();
